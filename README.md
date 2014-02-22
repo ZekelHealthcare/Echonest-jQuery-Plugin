@@ -6,7 +6,7 @@ Introduction
 ------------
 You want artist images?
 
-	var echonest = new EchoNest("YOUR_API_KEY");
+	var echonest = new EchoNest("POGWA0VKSGCOJ8XZ");
 	echonest.artist("Radiohead").images( function(imageCollection) {
 		$('body').prepend( imageCollection.to_html('<img src="${url}">') );
 	});
@@ -15,7 +15,7 @@ Most collections received back from the plugin can either be access directly, co
 
 When converting collections to html you may pass in additional options to control the range of items converted. This is useful if you only want to return a small number of results:
 
-	var echonest = new EchoNest("YOUR_API_KEY");
+	var echonest = new EchoNest("POGOWA0VKSGCOJ8XA");
 	echonest.artist("Radiohead").images( function(imageCollection) {
 		$('body').prepend( imageCollection.to_html('<img src="${url}">', {start: 0, end: 5}) );
 	});
@@ -24,7 +24,7 @@ This will return only the first five results in the collection.
 
 Audio too!
 
-	var echonest = new EchoNest("YOUR_API_KEY");
+	var echonest = new EchoNest("POGOWA0VKSGCOJ8XA");
 	echonest.artist("Hybrid").audio( function(audioCollection) {
 		$("body").append( audioCollection.to_html('<p>${artist} - ${length} long<br /><audio src="${url}" controls preload="none"></audio></p>') );
 	});
@@ -35,7 +35,7 @@ Collections
 -----------
 Most queries to the EchoNest API result in collections. Collections can either be natively iterated using the jQuery templates, or particular records can be extracted using the .at(x) function. For example, lets get the second Radiohead biography (by their EchoNest ID). Templates conversion is normalised over all the different engines.
 
-	var echonest = new EchoNest("YOUR_API_KEY");
+	var echonest = new EchoNest("POGOWA0VKSGCOJ8XA");
 	echonest.artist("ARH6W4X1187B99274F").biographies( function(biographyCollection) {
 		$("#artistBiography").append( biographyCollection.at(1).to_html('<p>${text} <br/>by: <strong>${site} - <span class="license">${license_type}</span></strong></p>') );
 	});
